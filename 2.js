@@ -52,4 +52,4 @@ var config = { containerID: 'imgQR'	},
 
 var imgQR = '<tr><td><img id="srcQR" class="srcQR" src="'+srcimgQR+'"></img></td></tr>';
 
-d.getElementsByTagName('tbody')[0].appendChild(imgQR);  
+ d.tbody.appendChild(imgQR);  
