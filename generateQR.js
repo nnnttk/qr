@@ -15,7 +15,7 @@ var TEST_NUMERIC = /^\d+$/;
    }
  }
 	  
- var data = window.location.href;
+ var data = window.location.href.replace("?","@").replace(/@.+/,"");
  //var mode = encodeMode.val();
  var mode = 'Auto';
  //var ecLevel = encodeECLevel.val();
@@ -37,7 +37,7 @@ var TEST_NUMERIC = /^\d+$/;
 
 	qrcode.write(data).make();
 
-	var srcimgQR = qrcode.toDataURL(moduleSize, margin); console.log(srcimgQR);
+	var srcimgQR = qrcode.toDataURL(moduleSize, margin); //console.log(srcimgQR);
    
  } catch (error) {
    alert(error.message);
