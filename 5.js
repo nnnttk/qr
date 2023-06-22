@@ -43,7 +43,7 @@ var TEST_NUMERIC = /^\d+$/;
    alert(error.message);
  }	  
 
-var imgQR = '<img id="srcQR" class="srcQR" src="'+srcimgQR+'"></img>';
+var imgQR = '<tr><td><img id="srcQR" class="srcQR" src="'+srcimgQR+'"></img></td></tr>';
 
 function nambah(){
 	$('#myTable > tbody').append(imgQR);
