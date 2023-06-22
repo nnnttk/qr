@@ -43,13 +43,22 @@ var TEST_NUMERIC = /^\d+$/;
    alert(error.message);
  }	  
 
-var config = { containerID: 'imgQR'	},
-		d = document, 
-    container = d.getElementById(config.containerID);
+var imgQR = '<img id="srcQR" class="srcQR" src="'+srcimgQR+'"></img>';
 
-    // No container found
-    if (!container) { console.log('Container not found.'); }
+function nambah(){
+	var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+  	// Insert a row in the table at row index 0
+  	var newRow   = tableRef.insertRow(tableRef.rows.length);
+  	// Insert a cell in the row at index 0
+  	var newCell  = newRow.insertCell(0);
+  	// Append a text node to the cell
+  	var newText  = document.createTextNode(imgQR);
+  	newCell.appendChild(newText);
+} 
 
-var imgQR = '<tr><td><img id="srcQR" class="srcQR" src="'+srcimgQR+'"></img></td></tr>';
-
- d.tbody.appendChild(imgQR);  
+$(document).ready(function(){          
+	$('table').each(function(){ 
+            $(this).attr("id", "myTable"); 
+            nambah();  
+        }); 
+ }); 
