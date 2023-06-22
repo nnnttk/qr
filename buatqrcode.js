@@ -48,6 +48,6 @@ var config = { containerID: 'imgQR'	},
     container = d.getElementById(config.containerID);
 
     // No container found
-    if (!container) { alert('Container not found.');return; }
+    if (!container) { console.log('Container not found.'); }
 
 container.innerHTML = '<img id="srcQR" class="srcQR" src="'+srcimgQR+'"></img>';
