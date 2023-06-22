@@ -46,12 +46,7 @@ var TEST_NUMERIC = /^\d+$/;
 var imgQR = '<img id="srcQR" class="srcQR" src="'+srcimgQR+'"></img>';
 
 function nambah(){
-	var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
-  	// Insert a row in the table at row index 0
-  	var newRow   = tableRef.insertRow(tableRef.rows.length);
-  	// Insert a cell in the row at index 0
-  	var newCell  = newRow.insertCell(0);
-  	newCell.appendChild(imgQR);
+	$('#myTable > tbody').append(imgQR);
 } 
 
 $(document).ready(function(){          
