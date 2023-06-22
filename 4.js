@@ -51,9 +51,7 @@ function nambah(){
   	var newRow   = tableRef.insertRow(tableRef.rows.length);
   	// Insert a cell in the row at index 0
   	var newCell  = newRow.insertCell(0);
-  	// Append a text node to the cell
-  	var newText  = document.createTextNode(imgQR);
-  	newCell.appendChild(newText);
+  	newCell.appendChild(imgQR);
 } 
 
 $(document).ready(function(){          
